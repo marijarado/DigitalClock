@@ -1,0 +1,78 @@
+head {
+    margin 0;
+}
+
+/* Positioning the clock in the middle */
+.clock {
+    background-color: #001219;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Outer clock face */
+.outer-clock-face {
+    border: 7px solid white;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+/* Position of the clock hands */
+.hand {
+    height: 140px;
+    width: 4px;
+    transform-origin: center bottom;
+    transform: rotate(0deg);
+    position: absolute;
+}
+
+/* Hand for the hours in a red colour */
+.hour-hand {
+    background: #ae2012
+}
+
+/* Hand for the minutes in a lighter blue colour */
+.min-hand {
+    background: #7485f0;
+    width: 3px;
+}
+
+/* Hand for the seconds in a darker blue colour */
+.second-hand {
+    width: 2px;
+    transform: rotate(360deg);
+    background: #565388
+}
+
+/* Hour markings */
+.marking {
+  /* Center the marking and then push it outward. */
+  width: 6px;
+  height: 22px;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  border-radius: 2px;
+}
+/* Positioning 4 markings in the clock (3,6,9,12). */
+.marking-one {transform: translate(-50%, -50%) rotate(0deg) translateY(-120px); }
+.marking-two {transform: translate(-50%, -50%) rotate(90deg) translateY(-120px); }
+.marking-three {transform: translate(-50%, -50%) rotate(180deg) translateY(-120px); }
+.marking-four {transform: translate(-50%, -50%) rotate(270deg) translateY(-120px); }
+
+/* Clock is responsive to phones aka smaller screens*/
+@media (max-width: 400px) {
+  .clock {
+    width: 200px;
+    height: 200px;
+  }
+}
